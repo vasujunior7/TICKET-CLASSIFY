@@ -1,6 +1,6 @@
-# Support Ticket Classifier - Optimized for Small Dataset 🎯
+# Support Ticket Classifier - Fine-tuned DistilBERT for Small Dataset 🎯
 
-A high-performance finetuned text classification system specifically optimized for classifying support tickets with limited training data (300 samples).
+A high-performance text classification system built by **fine-tuning DistilBERT** specifically for support ticket classification with limited training data (300 samples). The model is not just based on DistilBERT, but is **fine-tuned end-to-end** on your support ticket data to maximize accuracy and generalization for this domain.
 
 ## 🏆 Performance Results
 
@@ -126,6 +126,7 @@ Health check endpoint.
 
 ### Base Model
 - **Architecture**: DistilBERT (66M parameters)
+- **Fine-tuning**: The model is fine-tuned on the support ticket dataset using supervised learning, optimizing for classification accuracy on your specific categories (Billing, Technical, Other).
 - **Tokenizer**: WordPiece with 30,522 vocabulary
 - **Max Sequence Length**: 128 tokens
 - **Input**: Preprocessed support ticket text
