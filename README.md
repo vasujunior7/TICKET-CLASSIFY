@@ -46,14 +46,21 @@ Interactive documentation: `http://localhost:8000/docs`
 ```bash
 curl -X POST "http://localhost:8000/predict" \
      -H "Content-Type: application/json" \
-     -d '{"text": "I was charged twice for my subscription", "return_probabilities": true}'
+     -d '{"text": "I was charged twice for my subscription", "include_all_scores": true}'
+
 ```
 
 #### Batch Prediction:
 ```bash
-curl -X POST "http://localhost:8000/predict_batch" \
+curl -X POST "http://localhost:8000/predict/batch" \
      -H "Content-Type: application/json" \
-     -d '{"texts": ["Login not working", "Need refund", "How to upgrade?"], "return_probabilities": true}'
+     -d '{
+           "texts": [
+             "My laptop port got burn suddenly.",
+             "My billings for the loan is increasing for no reason."
+           ],
+           "include_all_scores": false
+         }'
 ```
 
 #### Using Python:
